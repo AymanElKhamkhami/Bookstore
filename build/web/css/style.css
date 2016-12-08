@@ -1,0 +1,61 @@
+#bg{
+
+    background-color:rgba(0,0,0,0.5);
+    position:fixed;
+    height: 100%;
+    width: 100%;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    right:0px;
+
+    animation: fade 700ms;
+    -webkit-animation: fade 700ms;
+}
+
+#editBox{
+
+    position:absolute;
+    height:40px;
+    width: 340px;
+    top:200px;
+    left:38%;
+    line-height:40px;
+    background: white;
+    animation:descendre 500ms ;
+    -webkit-animation:descendre 500ms;
+
+}
+
+
+
+@keyframes descendre{ 
+    0% {	top:100px; opacity: 0;}
+    100% {	top:200px; opacity: 1}
+}
+
+@-webkit-keyframes descendre { /* Safari and Chrome */
+    0% {	top:100px; opacity: 0;}	
+    100% {	top:200px; opacity: 1}
+}
+
+@keyframes descendreAlertModifier{ 
+    0% {	top:200px; opacity: 0;}
+    100% {	top:248px; opacity: 1}
+}
+
+@-webkit-keyframes descendreAlertModifier { 
+    0% {	top:200px; opacity: 0;}	
+    100% {	top:248px; opacity: 1}
+}
+
+@keyframes fade{ 
+    0% { opacity: 0;}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fade /* Safari and Chrome */
+{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

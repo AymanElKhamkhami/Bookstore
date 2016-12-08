@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 06-Feb-2015 15:31:04 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="model.pojo.Cartbook" table="cartbook" catalog="`LODZ-SPRING3`">
+        <id name="idCartbook" type="java.lang.Integer">
+            <column name="id_cartbook" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="cart" class="model.pojo.Cart" fetch="select">
+            <column name="id_cart" not-null="true" />
+        </many-to-one>
+        <many-to-one name="book" class="model.pojo.Book" fetch="select">
+            <column name="id_book" not-null="true" />
+        </many-to-one>
+        <property name="quantity" type="int">
+            <column name="quantity" not-null="true" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="10" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
